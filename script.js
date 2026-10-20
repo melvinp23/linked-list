@@ -44,7 +44,10 @@ class LinkedList {
 		return count;
 	}
 
-	head() {}
+	// 4. Returns the value of the first node, or undefined if empty
+	head() {
+		return this.headNode ? this.headNode.value : undefined;
+	}
 
 	tail() {}
 
