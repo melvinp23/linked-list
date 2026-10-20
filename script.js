@@ -25,7 +25,11 @@ class LinkedList {
 		current.next = newNode;
 	}
 
-	prepend(value) {}
+	// 2. Adds a new node containing value to the start of the list
+	prepend(value) {
+		const newNode = new Node(value, this.headNode);
+		this.headNode = newNode;
+	}
 
 	size() {}
 
