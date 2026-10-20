@@ -98,7 +98,19 @@ class LinkedList {
 		return false;
 	}
 
-	findIndex(value) {}
+	// 9. Returns the index of the node containing the value, or -1
+	findIndex(value) {
+		let current = this.headNode;
+		let index = 0;
+
+		while (current) {
+			if (current.value === value) return index;
+			index++;
+			current = current.next;
+		}
+
+		return -1;
+	}
 
 	toString() {}
 }
