@@ -62,7 +62,17 @@ class LinkedList {
 		return current.value;
 	}
 
-	at(index) {}
+	// 6. Returns the value of the node at the given index, or undefined
+	at(index) {
+		let current = this.headNode;
+		let count = 0;
+
+		while (current) {
+			if (count === index) return current.value;
+			count++;
+			current = current.next;
+		}
+	}
 
 	pop() {}
 
