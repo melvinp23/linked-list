@@ -1,3 +1,5 @@
+export { Node, LinkedList };
+
 class Node {
 	constructor(value = null, next = null) {
 		this.value = value;
@@ -119,7 +121,7 @@ class LinkedList {
 		let result = '';
 
 		while (current) {
-			result += `( ${current.value} -> )`;
+			result += `( ${current.value} ) -> `;
 			current = current.next;
 		}
 
