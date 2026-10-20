@@ -11,7 +11,19 @@ class LinkedList {
 	}
 
 	// 1. Adds a new node containing value to the end of the list
-	append(value) {}
+	append(value) {
+		const newNode = new Node(value);
+		if (!this.headNode) {
+			this.headNode = newNode;
+			return;
+		}
+
+		let current = this.headNode;
+		while (current.next) {
+			current = current.next;
+		}
+		current.next = newNode;
+	}
 
 	prepend(value) {}
 
