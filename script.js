@@ -49,7 +49,18 @@ class LinkedList {
 		return this.headNode ? this.headNode.value : undefined;
 	}
 
-	tail() {}
+	// 5. Returns the value of the final node, or undefined if empty
+	tail() {
+		let current = this.headNode;
+
+		if (!this.headNode) return undefined;
+
+		while (current.next) {
+			current = current.next;
+		}
+
+		return current.value;
+	}
 
 	at(index) {}
 
