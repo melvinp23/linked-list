@@ -112,5 +112,18 @@ class LinkedList {
 		return -1;
 	}
 
-	toString() {}
+	// 10. Represents the LinkedList as a string format: ( value ) -> ( value ) -> null
+	toString() {
+		if (!this.headNode) return '';
+		let current = this.headNode;
+		let result = '';
+
+		while (current) {
+			result += `( ${current.value} -> )`;
+			current = current.next;
+		}
+
+		result += 'null';
+		return result;
+	}
 }
