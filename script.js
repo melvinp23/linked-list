@@ -72,9 +72,19 @@ class LinkedList {
 			count++;
 			current = current.next;
 		}
+
+		return undefined;
 	}
 
-	pop() {}
+	// 7. Removes the head node from the list and return its value, or undefined
+	pop() {
+		if (!this.headNode) return undefined;
+
+		const value = this.headNode.value;
+		this.headNode = this.headNode.next;
+
+		return value;
+	}
 
 	contains(value) {}
 
