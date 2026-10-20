@@ -31,7 +31,18 @@ class LinkedList {
 		this.headNode = newNode;
 	}
 
-	size() {}
+	// 3. Returns the total number of nodes in the list
+	size() {
+		let count = 0;
+		let current = this.headNode;
+
+		while (current) {
+			count++;
+			current = current.next;
+		}
+
+		return count;
+	}
 
 	head() {}
 
